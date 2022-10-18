@@ -1,4 +1,4 @@
-public class Vehicles
+public abstract class Vehicles
 {
     protected String carNumber;
     protected int age;
@@ -53,6 +53,11 @@ public class Vehicles
 
     public void setEmissionsPerMinute(double emissionsPerMinute) {
         this.emissionsPerMinute = emissionsPerMinute;
+    }
+
+    public double exhaust()
+    {
+        return this.emissionsPerMinute * 60;
     }
 
     @Override

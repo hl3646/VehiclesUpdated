@@ -1,4 +1,4 @@
-public class Truck extends Heavy
+public abstract class Truck extends Heavy
 {
     protected int maxCarryWeight;
 
@@ -13,6 +13,11 @@ public class Truck extends Heavy
 
     public void setMaxCarryWeight(int maxCarryWeight) {
         this.maxCarryWeight = maxCarryWeight;
+    }
+
+    @Override
+    public double exhaust() {
+        return super.exhaust() * 1.5;
     }
 
     @Override

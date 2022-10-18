@@ -1,4 +1,4 @@
-public class Heavy extends Vehicles
+public abstract class Heavy extends Vehicles
 {
     protected int carrierAmount;
 
@@ -13,6 +13,11 @@ public class Heavy extends Vehicles
 
     public void setCarrierAmount(int carrierAmount) {
         this.carrierAmount = carrierAmount;
+    }
+
+    @Override
+    public double exhaust() {
+        return (super.exhaust() + (500 * this.carrierAmount));
     }
 
     @Override

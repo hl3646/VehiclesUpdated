@@ -16,6 +16,16 @@ public class Cart extends Light
     }
 
     @Override
+    public double exhaust() {
+        return (super.exhaust() + (this.chargeTime * 30));
+    }
+
+    public int hitchhikers()
+    {
+        return (int)this.chargeTime/2;
+    }
+
+    @Override
     public String toString() {
         return "Cart{" +
                 "chargeTime=" + chargeTime +

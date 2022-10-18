@@ -1,4 +1,4 @@
-public class Light extends Vehicles
+public abstract class Light extends Vehicles
 {
     protected boolean hasEngine;
 

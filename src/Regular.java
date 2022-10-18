@@ -1,4 +1,4 @@
-public class Regular extends Vehicles
+public abstract class Regular extends Vehicles
 {
     protected int passengerAmount;
 
@@ -13,6 +13,21 @@ public class Regular extends Vehicles
 
     public void setPassengerAmount(int passengerAmount) {
         this.passengerAmount = passengerAmount;
+    }
+
+    @Override
+    public double exhaust() {
+        return (super.exhaust() + (150 * this.passengerAmount));
+    }
+
+    public void noise()
+    {
+        System.out.println("vroom vroom");
+    }
+
+    public int hitchhikers()
+    {
+        return ((int)this.passengerAmount/2);
     }
 
     @Override
